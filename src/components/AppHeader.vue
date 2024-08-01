@@ -1,22 +1,85 @@
+<script>
+export default {
+
+data() {
+    return{
+        links: [
+            {
+                label:'CHARACTERS',
+                url:'#',
+                current: false
+            },
+             {
+                label:'COMICS',
+                url:'#',
+                current: false
+            },
+             {
+                label:'MOVIES',
+                url:'#',
+                current: false
+            },
+             {
+                label:'TV',
+                url:'#',
+                current: false
+            },
+             {
+                label:'GAMES',
+                url:'#',
+                current: false
+            },
+             {
+                label:'COLLECTIBLES',
+                url:'#',
+                current: false
+            },
+             {
+                label:'VIDEOS',
+                url:'#',
+                current: false
+            },
+             {
+                label:'FANS',
+                url:'#',
+                current: false
+            },
+             {
+                label:'NEWS',
+                url:'#',
+                current: false
+            },
+             {
+                label:'SHOP',
+                url:'#',
+                current: false
+            }
+            
+        ]
+    }
+}
+    
+}
+</script>
 <template>
     <header>
                           
                
            <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="../assets/dc-logo.png"height="100" />  </a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="#">CHARACTERS</a>
-                <a class="nav-link" href="#">COMICS</a>
-                <a class="nav-link" href="#">MOVIES</a>
-                <a class="nav-link" href="#">TV</a>
-                <a class="nav-link" href="#">GAMES</a>
-                <a class="nav-link" href="#">COLLECTIBLES</a>
-                <a class="nav-link" href="#">VIDEOS</a>
-                <a class="nav-link" href="#">FANS</a>
-                <a class="nav-link" href="#">NEWS</a>
-                <a class="nav-link" href="#">SHOP</a>
-            </div>
+            <a class="navbar-brand" href="#">
+                <img src="../assets/dc-logo.png"height="100" />  
+            </a>
+
+            <div class="col-9">
+                <ul class="navbar-nav ms-auto">
+                <li v-for="link,index in links" :key="index" :class="['nav-item', link.current ? 'active' : '']">
+                    <a :href="link.url"class="nav-link">{{ link.label }}</a>
+                
+                </li>
+                
+            </ul>
+        </div>
         </div>
     </nav>
              
@@ -27,18 +90,14 @@
     </header>
 </template>
 
-<script>
-export default {
-    
-}
-</script>
+
 
 <style lang="scss">
    .navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 
-.navbar-nav .nav-link {
+ .navbar-nav .nav-item .nav-link {
     color: #000;
     font-weight: 600;
     text-transform: uppercase;
@@ -46,11 +105,15 @@ export default {
     transition: color 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus {
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:focus {
     color: #0082F9;
 }
-        .content-area {
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #0082F9;
+}
+      .content-area {
             background-color: #222;
             color: #fff;
             padding: 20px;
