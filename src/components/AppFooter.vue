@@ -81,8 +81,27 @@ export default {
             </div>
         </div>
     </div>
+    <div class="bg-dark text-white py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <button class="btn btn-outline-light">SIGN-UP NOW!</button>
+                </div>
+                <div class="col text-end">
+                    FOLLOW US
+                    <a href="#" class="ms-2"><img src="../img/footer-facebook.png "></a>
+                    <a href="#" class="ms-2"><img src="../img/footer-periscope.png "></a>
+                    <a href="#" class="ms-2"><img src="../img/footer-pinterest.png "></a>
+                    <a href="#" class="ms-2"><img src="../img/footer-twitter.png "></a>
+                    <a href="#" class="ms-2"><img src="../img/footer-youtube.png "></a>
 
-    
+ 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
  
        
