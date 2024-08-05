@@ -30,7 +30,7 @@ export default {
                     </div>
                 </div>
                 <div>
-                    <button class="btn btn-primary rounded-0 px-5">LOAD MORE</button>
+                    <button class="btn btn-primary  justify-content-center px-5">LOAD MORE</button>
                 </div>
             </div>
         </div>

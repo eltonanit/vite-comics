@@ -83,7 +83,10 @@ data() {
         </div>
     </nav>
              
-                
+               <div class="col-12">
+                    <img src="../img/jumbotron.jpg"  class="img-fluid">
+                     
+                </div>  
                  
 
             
@@ -113,11 +116,7 @@ data() {
 .navbar-nav .nav-item.active .nav-link {
     color: #0082F9;
 }
-      .content-area {
-            background-color: #222;
-            color: #fff;
-            padding: 20px;
-        }
+   
         .footer-links {
             background-color: #0082F9;
             color: #fff;
